@@ -1,0 +1,12 @@
+version: '3'
+services:
+  fastapi:
+    build: 
+      dockerfile: ./Dockerfile
+      context: ./
+    container_name: build-process
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/app
+    restart: always
